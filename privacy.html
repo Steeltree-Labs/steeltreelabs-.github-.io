@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIF: Punchlist &amp; Reports - Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px; color: #1d1d1f; line-height: 1.6; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 32px; border-bottom: 1px solid #e5e5e5; padding-bottom: 8px; }
+  h3 { font-size: 16px; margin-top: 20px; }
+  p, li { font-size: 15px; }
+  .effective { color: #86868b; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 12px; border: 1px solid #e5e5e5; }
+  th { background: #f5f5f7; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="effective">Effective Date: April 14, 2026</p>
+<p>Steel Tree Labs LLC ("we," "us," or "our") operates VIF: Punchlist &amp; Reports (the "App"). This Privacy Policy explains how we collect, use, and protect your information when you use the App.</p>
+
+<h2>1. Information We Collect</h2>
+
+<h3>1.1 Photos and Images</h3>
+<p>When you use the AI defect analysis feature, photos you select or capture are uploaded to our server (hosted on Supabase) for processing by our AI pipeline. Photos are compressed before upload. Photos are also synced to your private Apple iCloud account via CloudKit for backup and cross-device access.</p>
+
+<h3>1.2 Text and Voice Input</h3>
+<p>You may provide text descriptions or use voice dictation to describe defects. Speech recognition is performed entirely on your device using Apple's built-in speech framework. Only the resulting transcribed text, not audio, may be sent to our server as context for AI generation.</p>
+
+<h3>1.3 Location Data</h3>
+<p>With your permission, the App accesses your location solely to display local weather conditions and compass heading on the camera overlay. Location data is used transiently on your device and is not stored, transmitted to our servers, or embedded in photo metadata.</p>
+
+<h3>1.4 Device and App Metadata</h3>
+<p>When you use the AI generation feature, we collect limited technical metadata to support the service:</p>
+<ul>
+  <li>App version and build number</li>
+  <li>iOS version and device model</li>
+  <li>Locale identifier</li>
+  <li>Image size (in bytes)</li>
+</ul>
+<p>This information helps us monitor service quality and debug issues.</p>
+
+<h3>1.5 User Identity</h3>
+<p>We identify you using Apple's App Transaction ID, a stable identifier linked to your Apple Account. This is used for subscription verification and token quota tracking. If this identifier is unavailable, we generate a random per-device identifier. We do not collect your name, email address, or Apple ID.</p>
+
+<h3>1.6 Subscription and Purchase Data</h3>
+<p>All payment processing is handled by Apple through the App Store. We do not collect or store credit card numbers or payment credentials. We receive transaction verification tokens from Apple to confirm your subscription status.</p>
+
+<h2>2. How We Use Your Information</h2>
+<table>
+  <tr><th>Data</th><th>Purpose</th></tr>
+  <tr><td>Photos</td><td>AI-powered defect classification and assessment</td></tr>
+  <tr><td>Text/voice context</td><td>Improve accuracy of AI-generated defect descriptions</td></tr>
+  <tr><td>Location</td><td>Display weather and compass heading on camera (on-device only)</td></tr>
+  <tr><td>Device metadata</td><td>Service quality monitoring and debugging</td></tr>
+  <tr><td>User identity</td><td>Subscription verification and AI token quota management</td></tr>
+</table>
+
+<h2>3. Third-Party Services</h2>
+
+<h3>3.1 AI Processing (Supabase and OpenAI)</h3>
+<p>Photos and text context are sent to our backend hosted on Supabase. Our server forwards relevant data to third-party AI providers (such as OpenAI) for analysis. Your data is not sent directly from your device to these providers. AI processing results (defect classification, severity, recommended remedies) are returned to the App and stored in your project data. While we do not use your content to train our own models, the third-party AI providers we use may retain and process inputs and outputs in accordance with their own data and privacy policies, which may include use for model improvement.</p>
+
+<h3>3.2 Apple iCloud (CloudKit)</h3>
+<p>Your projects, punch list items, and photos are synced across your devices using Apple CloudKit. This data is stored in your private iCloud account and is encrypted by Apple both in transit and at rest. When you share a project with collaborators, a shared CloudKit zone is created that only invited participants can access.</p>
+
+<h3>3.3 Apple WeatherKit</h3>
+<p>The App uses Apple WeatherKit to fetch current weather conditions based on your location. This request is handled by Apple's framework and subject to Apple's privacy practices.</p>
+
+<h3>3.4 Autodesk Build (Optional)</h3>
+<p>If you choose to connect your Autodesk Build account, the App can sync punch list items and photos to your Autodesk Build projects. This integration is entirely optional and requires you to sign in through Autodesk's OAuth portal. We store your Autodesk authentication tokens securely in the device Keychain. Data shared with Autodesk includes issue details (title, description, severity, category) and associated photos.</p>
+
+<h3>3.5 Apple App Store (StoreKit)</h3>
+<p>Subscription and in-app purchase transactions are processed by Apple. We receive cryptographically signed transaction data to verify your entitlements.</p>
+
+<h2>4. Data Storage and Security</h2>
+<ul>
+  <li>All network communication uses HTTPS (TLS 1.2 or later).</li>
+  <li>Authentication tokens (Autodesk, Apple transaction data) are stored in the iOS Keychain, which is hardware-encrypted.</li>
+  <li>Local project data is stored in Core Data on your device, protected by iOS data protection.</li>
+  <li>CloudKit data is encrypted by Apple at rest and in transit.</li>
+  <li>Server-side data on Supabase is stored in a secured, access-controlled database.</li>
+</ul>
+
+<h2>5. Data Retention</h2>
+<ul>
+  <li><strong>On-device data:</strong> Retained until you delete it from the App or uninstall the App.</li>
+  <li><strong>CloudKit data:</strong> Retained in your iCloud account according to Apple's retention policies and your iCloud storage settings.</li>
+  <li><strong>Server-side AI requests:</strong> Generation request records (including uploaded photo URLs and results) are retained on our server for up to 30 days for service operation and support purposes, after which they are automatically deleted.</li>
+  <li><strong>Autodesk data:</strong> Data synced to Autodesk Build is subject to Autodesk's own data retention policies.</li>
+</ul>
+
+<h2>6. Data Sharing</h2>
+<p>We do not sell, rent, or share your personal information with third parties for marketing purposes. Your data is shared only as described in this policy:</p>
+<ul>
+  <li>With OpenAI for AI defect analysis (via our server, not directly from your device)</li>
+  <li>With Apple for iCloud sync, weather, and payment processing</li>
+  <li>With Autodesk, only if you explicitly enable the integration</li>
+  <li>With project collaborators you invite via CloudKit sharing</li>
+</ul>
+
+<h2>7. Tracking and Analytics</h2>
+<p>The App does not use any third-party analytics, advertising, or tracking frameworks. We do not track you across other apps or websites. We do not use the Apple Advertising Identifier (IDFA).</p>
+
+<h2>8. Your Rights</h2>
+<p>You may:</p>
+<ul>
+  <li><strong>Delete your data:</strong> Remove projects, items, and photos from within the App at any time. Uninstalling the App removes all local data.</li>
+  <li><strong>Revoke permissions:</strong> Disable camera, microphone, location, or photo library access in iOS Settings at any time.</li>
+  <li><strong>Disconnect Autodesk:</strong> Sign out of your Autodesk account within the App to stop data sharing with Autodesk.</li>
+  <li><strong>Request server data deletion:</strong> Contact us to request deletion of your data from our servers.</li>
+  <li><strong>Manage iCloud data:</strong> Use iCloud settings on your device to manage or delete synced data.</li>
+</ul>
+
+<h2>9. Children's Privacy</h2>
+<p>The App is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with data, please contact us and we will promptly delete it.</p>
+
+<h2>10. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Effective Date" at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+<h2>11. Contact Us</h2>
+<p>If you have questions about this Privacy Policy or wish to exercise your data rights, contact us at:</p>
+<p>
+  Steel Tree Labs LLC<br>
+  Email: <a href="mailto:hello@steeltreelabs.com">hello@steeltreelabs.com</a>
+</p>
+
+</body>
+</html>
